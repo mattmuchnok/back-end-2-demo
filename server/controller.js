@@ -7,7 +7,7 @@ module.exports = {
     },
     deleteMovie: (req, res) => {
         let index = movies.findIndex(elem => elem.id === +req.params.id)
-        movies.splice(index.toExponential, 1)
+        movies.splice(index, 1)
         res.status(200).send(movies)
     },
     createMovie: (req, res) => {
